@@ -52,7 +52,7 @@ class THA:
             subprocess.run(["git","reset", "--hard", current.hexsha], cwd=self.save_to)
             time.sleep(1)
             result = subprocess.run([sys.executable, "./single_pytest.py", self.save_to], capture_output=True, text=True)
-            failures = ";".join([x.split(self.save_to.split('/')[-1])[-1][1:] for x in set(result.stdout.split())])
+            failures = ";".join([self.save_to.split('/')[-1].join(x.split(self.save_to.split('/')[-1])[1:])[1:] for x in set(result.stdout.split())])
 
             store_dict["test_failures"].append(failures)
 
