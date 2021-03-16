@@ -38,9 +38,8 @@ class THA:
                 prev = parents[0]
             else:
                 subprocess.Popen(["git","reset", "--hard", latest], cwd=self.save_to)
-                df = pd.DataFrame(store_dict, columns = ["commit_id", "diffs", "test_failures"])
-                print(df)
-                df.to_csv("../output/"+self.save_to.split("/")[-1]+".csv", index=False)
+
+                # print(df)
                 return
             # Get diffs
             diff = prev.diff(current)
@@ -57,6 +56,8 @@ class THA:
             store_dict["test_failures"].append(failures)
 
             current = prev
+            df = pd.DataFrame(store_dict, columns=["commit_id", "diffs", "test_failures"])
+            df.to_csv("../output/" + self.save_to.split("/")[-1] + ".csv", index=False)
 
 
 if __name__ == "__main__":
