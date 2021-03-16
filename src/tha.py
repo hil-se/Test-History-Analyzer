@@ -24,7 +24,7 @@ class THA:
                 name = diff_item.b_blob.path
             else:
                 raise Exception("Unknown Change Type.")
-            if name.split(".")[-1] == "py" and not name.split(".")[-2].split("/")[-1].startswith("test_"):
+            if name.split(".")[-1] == "py" and not name.split(".")[-2].split("/")[-1].startswith("test_") and not name.split(".")[-2].split("/")[-1].startswith("__"):
                 file_changed.append(name)
         return ";".join(file_changed)
 
