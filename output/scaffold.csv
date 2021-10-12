@@ -1,0 +1,10 @@
+commit_id,diffs,test_failures
+7ef14732171e779726c434d4cb3c24ec5a50125c,setup.py;src/scaffold/bar.py;tests/conftest.py,
+2f117141961a351b62a3da6e306b12112d1a7e40,,
+307544558135f861f8e76eae6e086915893b45c1,,
+9e713aaef4413f7ccf2491c715137f880698bf82,,
+ebd3c8df2d94c66926b6b66f65d154cacf029cb5,,
+bebe4fddcdc8a55bea8d42756bdcfbbf95c95d5e,,
+fb489b258f3f1af21afda3ffd8f1fbe9e5ace0f8,,
+260ed4cf67a944457348e2d0c3dc56bed2d84358,tests/conftest.py,
+9fc6e62b3dd7cd86f06f23af901c601d693ecd4e,,
